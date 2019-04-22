@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("man2html", "for man2html support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("man2html", "enable man2html support", "no");
+
+if (PHP_MAN2HTML != "no") {
+	EXTENSION("man2html", "man2html.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+}
+
